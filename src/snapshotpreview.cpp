@@ -235,7 +235,16 @@ void SnapshotPreview::slotUpload()
 {
     Settings *settings = Settings::self();
 
-    QString scheme    = settings->type() == Settings::EnumType::FTP ? "ftp" : "sftp";
+    QString scheme;
+    if (settings->type() == Settings::EnumType::FTP) {
+        scheme = "ftp";
+    } else if (settings->type() == Settings::EnumType::SFTP) {
+        scheme = "sftp";
+    } else if (settings->type() == Settings::EnumType::HTTP) {
+        scheme = "http";
+    } else if (settings->type() == Settings::EnumType::HTTPS) {
+        scheme = "https";
+    };
     QString server    = settings->server();
     uint    port      = settings->port();
     QString directory = settings->directory();

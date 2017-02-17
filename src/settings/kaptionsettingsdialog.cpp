@@ -22,9 +22,9 @@ KaptionSettingsDialog::KaptionSettingsDialog(QWidget *parent,
             i18n("Configure general settings"));
 
     addPage(new FtpUploadSettingsPage(this),
-            i18n("FTP upload"),
+            i18n("Upload"),
             "upload",
-            i18n("Configure FTP upload"));
+            i18n("Configure upload"));
 }
 
 KaptionSettingsDialog::~KaptionSettingsDialog()

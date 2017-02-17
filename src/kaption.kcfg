@@ -26,6 +26,8 @@
 	  <choices>
 	      <choice name="FTP" />
 	      <choice name="SFTP" />
+	      <choice name="HTTP" />
+	      <choice name="HTTPS" />
 	  </choices>
 	  <label>Server type</label>
 	  <default>FTP</default>
